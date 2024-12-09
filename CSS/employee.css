@@ -1,0 +1,99 @@
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: ltr;
+        }
+
+        /* Profile icon design */
+        .profile-container {
+    position: fixed; /* تثبيت الحاوية في الزاوية */
+    top: 20px; /* المسافة من الأعلى */
+    right: 20px; /* المسافة من اليمين */
+    text-align: center; /* محاذاة النص في المنتصف */
+}
+
+.profile-icon {
+    font-size: 24px; /* حجم الأيقونة */
+    color: white; /* لون الأيقونة */
+    cursor: pointer; /* تغيير المؤشر عند المرور فوق الأيقونة */
+    background-color: rgba(0, 0, 0, 0.5); /* خلفية داكنة مع شفافية (اختياري) */
+    padding: 10px; /* إضافة padding */
+    border-radius: 10px; /* لجعل الخلفية مستديرة */
+}
+
+.profile-text {
+    color: white; /* لون النص */
+    font-size: 16px; /* حجم النص */
+    margin-top: 5px; /* إضافة مسافة بين الأيقونة والنص */
+    display: block; /* جعل النص كتلة ليكون في سطر جديد */
+}
+
+
+
+        /* Sidebar design */
+        .profile-sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 9999;
+        }
+
+        .profile-sidebar table {
+            width: 100%;
+            padding: 10px;
+            border-collapse: collapse;
+        }
+
+        .profile-sidebar table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Close button for the sidebar */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 36px;
+            cursor: pointer;
+        }
+
+        /* Sidebar active state */
+        .profile-sidebar.active {
+            width: 300px;
+        }
+
+        /* Settings icon */
+        .settings-icon {
+            margin-top: 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Hidden section for user settings */
+        .settings-section {
+            display: none;
+            padding: 10px;
+        }
+
+        .settings-section.active {
+            display: block;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }

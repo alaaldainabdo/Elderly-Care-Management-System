@@ -1,0 +1,193 @@
+ /* تنسيق الجدول */
+ table {
+    width: 100%; /* تأكد من أن الجدول يأخذ العرض الكامل */
+    table-layout: auto; /* تسهيل توزيع الأعمدة */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    text-align: right;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* إضافة زوايا دائرية */
+    overflow: hidden; /* مخفي للحواف الدائرية */
+}
+
+table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+/* تغيير لون الخلفية لصفوف الجدول */
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+
+/* إضافة تأثير تمرير الماوس على الصفوف */
+table tbody tr:hover {
+    background-color: #e2f7f7; /* لون أفتح عند المرور */
+    cursor: pointer; /* تغيير المؤشر */
+}
+
+/* تنسيق الأزرار في الجدول */
+table button, table a {
+    padding: 4px 10px;
+    border-radius: 8px; /* إضافة زوايا دائرية */
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* إضافة تأثير */
+}
+
+
+
+
+a:hover {
+    background-color: #007b5e;
+}
+
+/* تأثيرات الرسوم المتحركة */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* تنسيق الأزرار في شريط البحث */
+.search-container button {
+    padding: 10px 20px;
+    background-color: #4A90E2;
+    color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .button-group {
+display: flex; /* استخدام Flexbox لجعل الأزرار متجاورة */
+justify-content: center; /* توسيط الأزرار */
+gap: 10px; /* إضافة مسافة بين الأزرار */
+}
+
+.action-button {
+padding: 8px 12px;
+background-color: #4A90E2;
+color: white;
+border: none;
+border-radius: 3px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.action-button:hover {
+background-color: #357ABD; /* تغيير لون الخلفية عند التمرير */
+}
+
+
+    .search-container button:hover {
+        background-color: #357ABD;
+    }
+    
+
+    /* تنسيق عام */
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
+
+/* تنسيق العنوان */
+h1 {
+    text-align: center;
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+/* تنسيق شريط البحث */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input, .search-container select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-container input:focus, .search-container select:focus {
+    border-color: #4A90E2;
+}
+
+/* تصميم الموديل */
+.modal {
+display: none; /* مخفي في البداية */
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.4); /* خلفية شفافة */
+}
+
+.modal-content {
+background-color: #fefefe;
+margin: 15% auto;
+padding: 20px;
+border: 1px solid #888;
+width: 300px;
+text-align: center;
+border-radius: 8px;
+}
+
+.close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+.alert {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid #d4edda;
+    border-radius: 5px;
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.message {
+    display: none; /* إخفاء الرسالة بشكل افتراضي */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+}

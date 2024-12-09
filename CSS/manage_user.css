@@ -1,0 +1,26 @@
+/* Styles for the password toggle button */
+#togglePassword {
+    width: 100%; /* Make the button full width */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+#togglePassword:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+.fade-out {
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+}
+
+.fade-out-hidden {
+    opacity: 0; /* Set opacity to 0 for fade-out effect */
+}
+
+.fade-out {
+    transition: opacity 1s ease; /* Smooth transition for opacity */
+}
+
+.fade-out-hidden {
+    opacity: 0; /* Set opacity to 0 for fade-out effect */
+}

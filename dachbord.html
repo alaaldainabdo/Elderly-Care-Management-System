@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم</title>
+    <link rel="stylesheet" href="style.css"> <!-- يمكنك إضافة تنسيق هنا -->
+</head>
+<body>
+    <h1>لوحة التحكم</h1>
+    
+    <h2>إدخال مستخدمين</h2>
+    <form action="insert_user.php" method="POST">
+        <input type="text" name="name" placeholder="الاسم" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <select name="role">
+            <option value="admin">مدير</option>
+            <option value="doctor">طبيب</option>
+            <option value="caregiver">مقدم رعاية</option>
+            <option value="family">عائلة</option>
+        </select>
+        <button type="submit">إضافة مستخدم</button>
+    </form>
+
+    <h2>إدخال مهام</h2>
+    <form action="insert_task.php" method="POST">
+        <input type="text" name="description" placeholder="وصف المهمة" required>
+        <select name="status">
+            <option value="pending">معلق</option>
+            <option value="completed">مكتمل</option>
+        </select>
+        <input type="date" name="due_date" required>
+        <input type="number" name="assigned_to" placeholder="معرف المستخدم" required>
+        <button type="submit">إضافة مهمة</button>
+    </form>
+
+    <h2>إدخال سجلات صحية</h2>
+    <form action="insert_health_record.php" method="POST">
+        <input type="number" name="elderly_id" placeholder="معرف كبير السن" required>
+        <input type="date" name="date" required>
+        <textarea name="vital_signs" placeholder="علامات حيوية"></textarea>
+        <textarea name="notes" placeholder="ملاحظات"></textarea>
+        <input type="number" name="updated_by" placeholder="معرف المستخدم الذي قام بالتحديث" required>
+        <button type="submit">إضافة سجل صحي</button>
+    </form>
+
+    <h2>إدخال تنبيهات طارئة</h2>
+    <form action="insert_emergency_alert.php" method="POST">
+        <input type="number" name="elderly_id" placeholder="معرف كبير السن" required>
+        <textarea name="alert_message" placeholder="رسالة التنبيه"></textarea>
+        <input type="datetime-local" name="alert_date" required>
+        <input type="number" name="sent_to" placeholder="معرف المستخدم المرسل إليه" required>
+        <button type="submit">إضافة تنبيه طارئ</button>
+    </form>
+
+    <h2>إدخال ملفات كبار السن</h2>
+    <form action="insert_elderly_profile.php" method="POST">
+        <input type="text" name="name" placeholder="الاسم" required>
+        <input type="number" name="age" placeholder="العمر" required>
+        <textarea name="medical_history" placeholder="التاريخ الطبي"></textarea>
+        <input type="text" name="emergency_contact" placeholder="جهة الاتصال الطارئة" required>
+        <input type="number" name="created_by" placeholder="معرف المستخدم الذي قام بإنشاء الملف" required>
+        <button type="submit">إضافة ملف كبير السن</button>
+    </form>
+
+    <h2>إدخال مواعيد الأدوية</h2>
+    <form action="insert_medication_schedule.php" method="POST">
+        <input type="number" name="elderly_id" placeholder="معرف كبير السن" required>
+        <select name="medication_time">
+            <option value="after_morning">بعد الصباح</option>
+            <option value="after_lunch">بعد الغداء</option>
+            <option value="after_dinner">بعد العشاء</option>
+        </select>
+        <input type="text" name="medication_name" placeholder="اسم الدواء" required>
+        <button type="submit">إضافة موعد دواء</button>
+    </form>
+</body>
+</html>

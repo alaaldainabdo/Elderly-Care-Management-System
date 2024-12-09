@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: space-between; /* توزيع الأعمدة بالتساوي */
+    gap: 20px; /* مسافة بين الأعمدة */
+    margin-bottom: 20px; /* مسافة أسفل عناصر البحث */
+}
+
+.filter-column {
+    display: flex;
+    flex-direction: column; /* ترتيب كل حقل كعمود */
+    flex: 1; /* ليأخذ كل عمود نفس الحجم */
+    align-items: center; /* توسيط محتوى العمود */
+}
+
+.filter-column label {
+    margin-bottom: 5px; /* مسافة بين التسمية والحقل */
+    font-weight: bold; /* إبراز النص */
+    text-align: center; /* توسيط النص داخل التسمية */
+    width: 100%; /* ليأخذ الـ label كامل العرض المتاح */
+    display: block; /* لجعل التسمية تظهر ككتلة وتأخذ عرض العمود */
+}
+
+.filter-column input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* جعل الحقل يأخذ كامل العرض */
+    text-align: center; /* توسيط النص داخل خانة الإدخال */
+}
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: column; /* عند الشاشات الصغيرة، اجعل الحقول تتكدس عموديًا */
+    }
+
+    .filter-column {
+        margin-bottom: 10px; /* إضافة مسافة بين الأعمدة في الشاشات الصغيرة */
+    }
+}
+

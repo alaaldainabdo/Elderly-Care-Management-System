@@ -1,0 +1,61 @@
+/*<!-- أنماط CSS --> */
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+
+    .content-background {
+        background: rgba(255, 255, 255, 0.9); /* لون خلفية فاتح مع شفافية */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-gallery {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .image-gallery img {
+        max-width: 30%;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.05);
+    }
+
+    .text-background {
+        background: rgba(255, 255, 255, 0.8); /* خلفية نصية شفافة */
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        margin: 10px 0;
+        padding-left: 20px;
+        list-style-type: disc;
+    }
+
+    p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        text-align: justify;
+        color: #333; /* لون النص */
+    }
+
+    h6 {
+        margin-top: 20px;
+        font-weight: bold;
+        color: #333; /* لون النص */
+    }

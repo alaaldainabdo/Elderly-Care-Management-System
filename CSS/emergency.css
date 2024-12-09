@@ -1,0 +1,204 @@
+/* تنسيق عام */
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* تنسيق العنوان */
+h1 {
+    text-align: center;
+    color: #4A90E2;
+    margin-bottom: 20px;
+}
+
+/* تنسيق شريط البحث */
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input, .search-container select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+.search-container button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #357ABD;
+}
+
+.refresh-button {
+    position: absolute; /* لجعل الزر متحركاً داخل الحاوية */
+    left: 20px; /* تعديل هذا الرقم حسب المسافة التي تريدها من الحافة اليسرى */
+    top: 20px; /* تعديل المسافة من الحافة العلوية إذا أردت تحريكه رأسياً */
+    padding: 10px 20px; /* حجم الزر */
+    background-color: #4CAF50; /* لون خلفية الزر */
+    color: white; /* لون النص */
+    border: none; /* إزالة الحدود */
+    border-radius: 5px; /* جعل الزر ذو حواف مستديرة */
+    cursor: pointer; /* إظهار اليد عند مرور الفأرة */
+    
+}
+
+.refresh-button:hover {
+    background-color: #45a049; /* لون عند مرور الفأرة */
+}
+
+
+/* تنسيق الجدول */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #4A90E2;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* تنسيق الأزرار في الجدول */
+table button, table a {
+    padding: 8px 12px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table button:hover, table a:hover {
+    background-color: #357ABD;
+}
+
+/* نافذة منبثقة */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* تأثيرات الرسوم المتحركة */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* تأثير الاختفاء التدريجي */
+.fade-out {
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-out-hidden {
+    opacity: 0;
+}
+.message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000; /* تأكد من أن الرسالة تظهر فوق المحتوى الآخر */
+    color: #fff;
+}
+
+.message.success {
+    background-color: #4CAF50; /* لون أخضر للنجاح */
+    top: 50%; /* يجعل الرسالة في منتصف الصفحة عموديًا */
+    left: 50%; /* يجعل الرسالة في منتصف الصفحة أفقيًا */
+    transform: translate(-50%, -50%); /* لضبط المحاذاة في المنتصف بالضبط */
+    color: white; /* لون النص */
+    padding: 20px; /* حجم المساحة حول النص */
+    border-radius: 10px; /* حواف مستديرة */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    font-size: 18px; /* حجم النص */
+    display: none; /* إخفاء الرسالة افتراضيًا */
+    z-index: 9999; /* لضمان أنها تكون فوق باقي المحتويات */
+
+}
+.center-heading {
+    text-align: center; /* لتوسيط النص أفقياً */
+    margin-top: 20px; /* إضافة مسافة من الأعلى (اختياري) */
+}
+
+.message.error {
+    background-color: #f44336; /* لون أحمر للخطأ */
+    top: 50%; /* يجعل الرسالة في منتصف الصفحة عموديًا */
+    left: 50%; /* يجعل الرسالة في منتصف الصفحة أفقيًا */
+    transform: translate(-50%, -50%); /* لضبط المحاذاة في المنتصف بالضبط */
+    color: white; /* لون النص */
+    padding: 20px; /* حجم المساحة حول النص */
+    border-radius: 10px; /* حواف مستديرة */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+    font-size: 18px; /* حجم النص */
+    display: none; /* إخفاء الرسالة افتراضيًا */
+    z-index: 9999; /* لضمان أنها تكون فوق باقي المحتويات */
+
+}
+
+
+
+.modal-text {
+    text-align: center; /* محاذاة النص في المنتصف */
+    margin-top: 20px; /* إضافة مسافة من الأعلى لتوسيط النص رأسياً */
+    font-size: 18px; /* حجم خط مناسب */
+}
