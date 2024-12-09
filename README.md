@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🧓 Elderly_Care_Managemen_ System
 
 ## 📖 About the Project
@@ -117,3 +118,7 @@ Contributions are welcome! Feel free to submit a pull request or report any issu
 
 ## 📝 License
 This project is licensed under the [MIT License](LICENSE).
+=======
+# Elderly-Care-Management-System
+## 🧓 Elderly Care Management System
+>>>>>>> cb0681ad3b059ea8bd95aef8e19e2aa266cccb59
